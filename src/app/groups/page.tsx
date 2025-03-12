@@ -548,7 +548,7 @@ export default function GroupsPage() {
                     )}
                     
                     {activeGroupTab === 'about' && (
-                      <></>
+                      <>
                         <h3 className="font-medium mb-3 text-gray-200">О группе</h3>
                         <p className="text-gray-300">{selectedGroupData.description || 'Нет описания'}</p>
                       </>
