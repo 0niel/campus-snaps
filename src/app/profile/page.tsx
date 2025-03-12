@@ -93,10 +93,11 @@ export default function ProfilePage() {
   const convertToFeedItems = (): FeedItem[] => {
     switch (activeTab) {
       case "photos":
-        return (userPhotos?.photos || []).map((photo) => ({
+        return (userPhotos?.items || []).map((photo) => ({
           id: String(photo.id),
           type: "photo",
           data: photo,
+          date: new Date(photo.uploadDate),
         }));
       case "likes":
         return userLikes?.items || [];

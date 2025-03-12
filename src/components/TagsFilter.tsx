@@ -14,7 +14,8 @@ export const TagsFilter: React.FC<TagsFilterProps> = ({
   selectedDate,
   onDateClear,
 }) => {
-  const { data: tags, isLoading } = api.tag.getPopular.useQuery({ limit: 8 });
+  const { data, isLoading } = api.tag.getPopular.useQuery({ limit: 8 });
+  const tags = data?.tags;
 
   return (
     <div className="mb-8">
